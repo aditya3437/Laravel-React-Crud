@@ -23,7 +23,7 @@ const Home = () => {
     const onSubmitChange = async (e) => {
         e.preventDefault();
         try {
-            const responce= await axios.post("http://127.0.0.1:8000/api/addnew", userField);
+            const responce= await axios.post("http://13.232.128.177/api/addnew", userField);
             console.log(responce)
             setLoading(true);
         } catch (err) {

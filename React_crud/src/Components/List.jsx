@@ -11,7 +11,7 @@ const List = () => {
  
     const fetchData = async () => {
         try {
-            const result = await axios("http://127.0.0.1:8000/api/users");
+            const result = await axios("http://13.232.128.177/api/users");
             console.log(result.data.results);
             setUSerData(result.data.results)
         } catch (err) {
@@ -21,7 +21,7 @@ const List = () => {
  
     const handleDelete=async(id)=>{
         console.log(id);
-        await axios.delete("http://127.0.0.1:8000/api/userdelete/"+id);
+        await axios.delete("http://13.232.128.177/api/userdelete/"+id);
         const newUserData=userData.filter((item)=>{
             return(
                 item.id !==id

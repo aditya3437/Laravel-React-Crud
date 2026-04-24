@@ -20,7 +20,7 @@ const Edit = () => {
  
     const fetchUser=async()=>{
         try{
-            const result=await axios.get("http://127.0.0.1:8000/api/users/"+id);
+            const result=await axios.get("http://13.232.128.177/api/users/"+id);
             console.log(result.data.user);
             setUserField(result.data.user)
         }catch(err){
@@ -39,7 +39,7 @@ const Edit = () => {
     const onSubmitChange = async (e) => {
         e.preventDefault();
         try {
-            await axios.put("http://127.0.0.1:8000/api/usersupdate/"+id, userField);
+            await axios.put("http://13.232.128.177/api/usersupdate/"+id, userField);
             navigate('/');  
         } catch (err) {
             console.log("Something Wrong");

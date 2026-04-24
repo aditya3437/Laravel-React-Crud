@@ -14,7 +14,7 @@ const View = () => {
  
     const fetchUser=async()=>{
         try{
-        const result=await axios.get("http://127.0.0.1:8000/api/users/"+id);
+        const result=await axios.get("http://13.232.128.177/api/users/"+id);
         console.log(result.data.user);
         setUser(result.data.user);
  
